@@ -40,6 +40,7 @@ header span {
     display: flex;/* 📍 Свойствa flexbox для размещения блока с текстом и изображения в ряд, и центрирования их по вертикали */
     justify-content:center;
     align-items: center;
+    flex-direction: row;
 }
 
 .text-wrapper {
@@ -85,13 +86,16 @@ select {
 
 select:hover,
 .text-field:hover {
-    /* 📍 Стили для выпадающего списка и текстового поля при наведении курсора */
+   border:1px solid #2965F1 /* 📍 Стили для выпадающего списка и текстового поля при наведении курсора */
 }
 
 
 .info-wrapper {
-    display: flex;/* 📍 Свойство flexbox для расположения 2-х списков в ряд */
+    display: flex;
+    /* 📍 Свойство flexbox для расположения 2-х списков в ряд */
+
 }
+
 
 .section-title {
     font-weight: 700;
@@ -158,14 +162,15 @@ form {
     border-radius: 5px;
     width: 125px;
     height: 36px;
-    background-color: #2965f1;
     font-weight: 700;
     font-size: 14px;
     color: #fff;
+    transition: background-color 0.3s;
 }
 
 .btn:hover {
-    /* 📍 Стили для кнопки при наведении курсора */
+    cursor: pointer;/* 📍 Стили для кнопки при наведении курсора */
+    background-color: #2965f1;
 }
 
 .line {
@@ -195,7 +200,7 @@ footer {
     font-size: 14px;
     color: #2965f1;
     text-decoration: none;
-    transition: 0.2s;
+    transition: color 0.2s, text-decoration 0.2s;
 }
 
 .footer-link:hover {
